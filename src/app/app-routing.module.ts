@@ -40,6 +40,11 @@ const routes: Routes = [
     path: 'communication',
     loadChildren: () => import('./pages/communication/communication.module').then( m => m.CommunicationPageModule)
   },
+  {
+    path: 'web/forgetpass',
+    loadChildren: () => import('./web/forgetpass/forgetpass.module').then( m => m.ForgetpassPageModule)
+  },
+
 
  
 
