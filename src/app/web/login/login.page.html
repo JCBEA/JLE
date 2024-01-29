@@ -17,13 +17,13 @@
     <form>
       <div class="mt-4 mb-4">
         <label for="username" class="block login-input-color-text text-xs poppins-sb mb-2">Email</label>
-        <input type="text" id="username" name="username"  placeholder="Type your email"
+        <input [(ngModel)]="email" type="email" id="username" name="username"  placeholder="Type your email"
                class="w-full text-xs border primary-color-border-50 roboto rounded-md py-2 px-3 focus:outline-none focus:border-red-500">
       </div>
   
       <div class="mb-4">
         <label for="password" class="block login-input-color-text text-xs poppins-sb mb-2">Password</label>
-        <input type="password" id="password" name="password" placeholder="Type your password" required
+        <input  [(ngModel)]="password" type="password" id="password" name="password" placeholder="Type your password" required
                class="w-full text-xs border primary-color-border-50 roboto rounded-md py-2 px-3 focus:outline-none focus:border-red-500">
       </div>
   
@@ -35,11 +35,12 @@
         <a href="#" class="text-xs roboto text-gray-600 hover:underline">Forgot Password?</a>
       </div>
 
-      <button type="submit" class="w-full poppins-sb text-xs primary-color-bg text-white rounded-md py-2 px-4 focus:outline-none focus:shadow-outline-blue" routerLink="/web/dhome">
+      <button type="submit" (click)="login()" class="w-full poppins-sb text-xs primary-color-bg text-white rounded-md py-2 px-4 focus:outline-none focus:shadow-outline-blue" routerLink="/web/dhome">
         Login
       </button>
     </form>
   </div>
+
   
 
     <!-- Right column with black background -->
